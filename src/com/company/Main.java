@@ -9,7 +9,6 @@ public class Main {
         int upper = 100;
 
         for (int i=lower; i<=upper;i++) {
-          //  boolean number = true;
             int fizz;
             int buzz;
             int test;
@@ -17,34 +16,58 @@ public class Main {
             buzz = i % 3;
             test = i % 5;
 
+            boolean number = true;
+            if (fizz==0 && buzz==0 && test==0) {
+
+                System.out.println("FizzBuzzTest");
+                number=false;
+                continue;
+            }
+            if (fizz==0 && buzz==0) {
+
+                System.out.println("FizzBuzz");
+                number=false;
+                continue;
+
+            }
+
+            if (fizz==0 && test==0) {
+
+                System.out.println("FizzTest");
+                number=false;
+                continue;
+            }
+            if (buzz==0 && test==0) {
+
+                System.out.println("BuzzTest");
+                number=false;
+               continue;
+            }
+
             switch (fizz)
             {
                 case 0:
-                    System.out.print("Fizz");
-                    switch (buzz){
-                        case 0:
-                            System.out.print("Buzz");
-                            switch (test){
-                                case 0:
-                                    System.out.print("Test");
-                            }
-                    }
-                    System.out.println();
+                    System.out.println("Fizz");
+                    number=false;
 
             }
             switch (buzz){
                 case 0:
                     System.out.println("Buzz");
+                    number=false;
 
             }
             switch (test){
                 case 0:
                     System.out.println("Test");
+                    number=false;
+                    //System.out.println();
 
-                default: System.out.print(i);
+                }
 
+            if (number) {
+                    System.out.println(i);
             }
-
         }
 
     }
