@@ -15,13 +15,14 @@ public class Main {
             fizz = i % 2;
             buzz = i % 3;
             test = i % 5;
-
+// boolean number- needed to print or not the number itself
             boolean number = true;
             if (fizz==0 && buzz==0 && test==0) {
 
                 System.out.println("FizzBuzzTest");
                 number=false;
                 continue;
+// continue!!! helps to get out of the loop when the word is printed and we don't want to repeat it
             }
             if (fizz==0 && buzz==0) {
 
@@ -43,6 +44,7 @@ public class Main {
                 number=false;
                continue;
             }
+// the switch can be replaced by if- it doesn't play any special role.
 
             switch (fizz)
             {
